@@ -1,0 +1,3953 @@
+/*
+Theme Name: Azure Basic 
+Theme URI: http://silverglass.net/2012/01/02/azure-basic-free-wordpress-blog-theme/
+Author: C. A. Brown
+Author URI: http://cabrown.net/
+Description: A lightweight, two-column layout blog theme, with 6 widget areas and customizable header image. Valid HTML5 and CSS3 that can be modified. Compatiable with Wordpress 3.2 and above. Compatable IE7+, Opera 10+, Safari 5+, Firefox 3.5+.   
+Tags: blue, white, two-columns, custom-menu, custom-background, custom-header, right-sidebar
+
+Version: 2.6
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+ *
+ *
+ *
+ * CSS resets and layout uses modified version of the Blueprint CSS Framework 1.0.1
+ * http://blueprintcss.org
+ * Copyright (c) 2007-Present. See LICENSE for more info.
+ *
+ *
+ *
+*/
+
+/*    BlurePrint Reset and Framework        */
+/*------------------------------------------*/
+@import url('css/screen.css'); /* DO NOT REMOVE! */
+
+
+/*        Global Syles                 */
+/*------------------------------------*/
+
+details, figcaption, figure { border: 0; font-size:100%; font: inherit; vertical-align: baseline; margin: 0; padding: 0; }
+audio, canvas, video { border: 0; vertical-align: baseline; margin: 0; padding: 0; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { height: 100%; }
+
+body { height: 100%; 
+       font-family: Verdana, Geneva, sans-serif; 
+	   background: none repeat 0 0 scroll #fff; }
+
+:focus { outline: 0; }
+
+ol, ul { list-style: none; }
+
+a { text-decoration: none; }
+
+table { border-collapse: separate;
+        border-spacing: 0; }
+
+img { clear: both; }
+
+
+
+/*      Global WordPress Styles       */
+/*-----------------------------------*/
+
+.entry-content img {
+	margin: 0 0 1.5em 0;
+	}
+.alignleft, img.alignleft {
+	margin-right: 1.5em;
+	display: inline;
+	float: left;
+	}
+.alignright, img.alignright {
+	margin-left: 1.5em;
+	display: inline;
+	float: right;
+	}
+.aligncenter, img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+	}
+.wp-caption {
+	margin-bottom: 1.5em;
+	text-align: center;
+	padding-top: 5px;
+	}
+.wp-caption img {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	}
+.wp-caption p.wp-caption-text {
+	line-height: 1.5;
+	font-size: 10px;
+	margin: 0;
+	}
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+	}
+blockquote.left {
+	margin-right: 20px;
+	text-align: right;
+	margin-left: 0;
+	width: 33%;
+	float: left;
+	}
+blockquote.right {
+	margin-left: 20px;
+	text-align: left;
+	margin-right: 0;
+	width: 33%;
+	float: right;
+	}
+.gallery dl {}
+.gallery dt {}
+.gallery dd {}
+.gallery dl a {}
+.gallery dl img {}
+.gallery-caption {}
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+.sticky {}
+
+.bypostauthor {}
+
+
+/*      Basic Two-Column (Right) Lyouout       */
+/*--------------------------------------------*/
+
+#primary { float: left;
+           overflow: hidden;
+           width: 700px; }
+
+#content { width: 680px; }
+
+#sidebar { overflow: hidden;
+           float: right;
+           width: 220px; }
+
+#footer-bottom { clear: both;
+                 width: 100%; }
+
+
+
+/*    Framework Styles        */
+/*---------------------------*/
+
+#top-header { padding: 0 0 30px 0; }
+
+#main { padding: 0 0 30px 0; 
+        font-size: 12px; }
+
+#footer-bottom { padding: 0 0 10px 0; }
+
+.entry-header { margin: 0 0 25px 0; }
+
+article { padding: 0 0 30px 0; }
+
+
+
+
+/*    Primary Menu (Dropdown) Styles       */
+/*----------------------------------------*/
+
+#access { padding: 15px 10px 5px 18px; 
+          z-index: 500; }
+
+nav[role="navigation"] { position: relative; }
+
+nav[role="navigation"] ul { margin: 0 0 0 0;
+                            padding: 0 0 0 0; 
+						    display: block; }
+
+nav[role="navigation"] ul li { height: 2em; clear: both; display: inline-block; }
+nav[role="navigation"] ul li a { padding: 4px 8px; }
+
+nav[role="navigation"] ul li ul  { display: none; } 
+nav[role="navigation"] ul li:hover ul  { display: block; } 
+nav[role="navigation"] ul li ul  { position: absolute;
+                                   padding: 10px 0 0 0; }
+
+nav[role="navigation"] ul li ul li { display: block;
+                                     position: relative; }
+
+nav[role="navigation"] ul li ul li ul  { display: none !important; }
+nav[role="navigation"] ul li ul li:hover ul  { display: inline !important; 
+                                               position: relative !important; }
+nav[role="navigation"] ul li ul li ul { padding: 0 0 0 0 !important;}
+
+nav[role="navigation"] ul li ul li ul li { display: inline-block !important;
+                                           position: relative; } 
+
+
+/*    Static Sidebar Widget Styles       */
+/*---------------------------------------*/											 
+
+#sidebar-search { padding: 0 0 25px 0 ; }
+
+
+
+/*    Navigation       */
+/*--------------------*/
+
+
+.nav-next { float: left; }
+.nav-previous { float: right; }
+
+
+
+/*    Theme Credit Text      */
+/*--------------------------*/
+
+#theme-credit { text-align: center; }
+
+
+/*             Azure Basic Styles             */
+/*-------------------------------------------*/
+
+h1 { font-size: 2.5em; }
+
+#container-full { padding: 20px 0 20px 0; }
+
+#top-header { background: none repeat scroll 0 0 #fff; 
+              box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset; }
+			  
+
+/* Top Navigation */
+
+#access { background: url('images/azurebg.png') repeat scroll 100% 0 #6da0d3; }
+		  
+#access a { color: #fff; 
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+
+#access a:hover { color: #01152a; }
+
+#access ul li:hover ul  { background: url('images/azurebg.png') repeat scroll 100% 0 #6da0d3; }
+
+
+/* Header Title Section */
+
+#top-header-section { width: 100%; }
+
+#main-title { float: left;
+              position: relative;
+              width: 350px;
+		      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+		      padding-left: 1.5em;
+			  padding-top: 10px;
+              z-index: 25; }
+
+#site-title { text-transform: uppercase;
+              margin-bottom: 10px; 
+              font-size: 48px; }
+
+#site-description { font-variant: small-caps; 
+                    font-size: 14px; 
+					margin-bottom: 20px; }
+
+#header-sidebar-section { float: right;
+                          text-align: right;
+                          position: relative;
+			              padding-right: 15px;
+                          width: 560px;
+				          font-size: 12px;
+			              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+			              padding-top: 10px;
+                          z-index: 35;	}
+
+#header-sidebar-section ul { list-style-type: none;
+                             margin: 0;
+				             text-align: right;
+				             width: 560px; 
+                             padding-left: 0; }
+							 
+#header-sidebar-section ul ul li { display: inline; 
+                                   padding-right: 15px; }
+
+
+/* Header Image */
+
+#header-image { width: 986px; 
+                height: 300px;
+				border: 2px solid #6da0d3; }
+
+
+/* Main Content Section */
+
+#main { background: none repeat scroll 0 0 #fff; 
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset; }
+
+.featured-thumb { margin-bottom: 10px; }
+ 
+article { margin-bottom: 25px;
+	      padding-top: 10px;
+	      padding-left: 25px; }
+		  
+.entry-content { padding-top: 5px; }
+
+.entry-title { font-size: 28px; 
+               text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+
+.entry-meta { font-size: 10px; 
+	          color: #8E8C84; }
+
+.entry-meta a:hover { text-decoration: underline; }
+
+.entry-content a:hover { text-decoration: underline; }
+
+.entry-content embed { width: 675px; }
+
+.page-link { margin-bottom: 10px; }
+
+/* Sidebar Section */
+
+#sidebar { color: #545350; 
+           padding-right: 25px; 
+		   padding-left: 10px; }
+
+#sidebar-widget-title { color: #545350; }
+
+.screen-reader-text[for="s"] { display: none; }
+
+#wp-calendar { width: 100%; }
+
+#calendar_wrap #wp-calendar caption { text-align: center; }
+
+#wp-calendar #prev, #wp-calendar #next { font-style: normal;
+                                         font-size: 9pt; }
+
+#wp-calendar #next { text-align: right; }
+
+
+
+/* Single Page and Comments */
+
+.assistive-text { color: #545350; }
+
+#nav-single { padding-left: 25px; }
+
+#comments { padding-left: 25px; }
+
+#comments #respond { padding-left: 25px; }
+
+.comment-meta { margin-bottom: 10px; }
+
+.comment-author img { padding-right: 5px; }
+
+#nav-below { padding-left: 25px; }
+
+.pingback .edit-link { margin-left: 10px; }
+
+.comment-author a { color: #6fa2d6; }
+
+.comment-author a:hover { color: #28598A; 
+                          text-decoration: underline; }
+
+.comment-author img { margin: 0 10px 0 0; }
+
+.comment-form-author input[type="text"] { margin-left: 27px; 
+                                          background: none repeat scroll 0 0 #FFFFFF;
+                                          color: #7E7E7E;
+                                          outline: 0 none;
+                                          padding: 5px 10px;
+                                          position: relative;
+                                          width: 175px; }
+
+.comment-form-email input[type="text"] { margin-left: 30px; 
+                                         background: none repeat scroll 0 0 #FFFFFF;
+                                         color: #7E7E7E;
+                                         outline: 0 none;
+                                         padding: 5px 10px;
+                                         position: relative;
+                                         width: 175px; }
+
+.comment-form-url input[type="text"] { margin-left: 25px; 
+                                       background: none repeat scroll 0 0 #FFFFFF;
+                                       color: #7E7E7E;
+                                       outline: 0 none;
+                                       padding: 5px 10px;
+                                       position: relative;
+                                       width: 175px; }
+
+.comment-form-comment label { float: left; 
+                              clear: both; }
+
+.comment-form-comment textarea { margin-left: 15px;
+                                 margin-top: 0; 
+                                 background: none repeat scroll 0 0 #FFFFFF;
+                                 color: #7E7E7E;
+                                 outline: 0 none;
+                                 padding: 5px 10px;
+								 width: 500px;
+                                 position: relative; }
+
+#commentform p.form-allowed-tags { font-size: 9pt; }
+
+#comment-nav-above, #comment-nav-below { margin-bottom: 15px; }
+
+
+/* Footer Section */
+
+#footer-bottom { background: none repeat scroll 0 0 #6da0d3; }
+
+.column { float: left;
+          margin: 0 80px 0 0;
+          width: 170px; }
+
+.column.last { margin: 0; }
+
+#footer-content { padding-top: 25px; 
+                  padding-left: 25px; 
+				  padding-right: 10px; }
+
+#footer-content .column h4 { color: #000;
+                             font-size: 10.5pt; 
+                             border-bottom: 1px solid #000; }
+
+#footer-content .column ul { font-size: 9pt;  
+                             padding-left: 0 !important;}
+
+#footer-content .column ul li a { color: #28598A; }
+
+#footer-content .column ul li a:hover { color: #00F; }
+
+#site-credits { border-top: 1px solid #eaf8ff; 
+                padding: 15px 0 0 0; }
+
+#theme-credit { padding: 0 0 5px 0; }
+
+#theme-credit p { margin: 0 0 0 0; }
+#top-header {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+.headerinner {
+    margin: 0 auto;
+    width: 80%;
+    padding: 30px 0;
+    display: block;
+}
+.logo {
+    float: left;
+    display: block;
+    width: auto;
+}
+.headernav {
+    float: right;
+    width: 72%;
+    display: block;
+}
+#access {
+    background: none;
+    padding: 0;
+    float: left;
+    width: auto;
+    display: block;
+    margin-top: 10px;
+}
+#access a {
+    color: #000;
+    text-shadow: none;
+    font-size: 22px;
+    font-weight: 300;
+    padding: 10px 25px;
+}
+#access a:hover {
+  color:#FEBB6B;
+}
+#phoneaccount-header-section {
+  float: right;
+    display: block;
+    width: 42%;
+}
+#phoneaccount-sidebar-section {
+    float: right;
+    display: block;
+    width: 100%;
+}
+.callnow {
+    float: left;
+    display: block;
+    width: 40%;
+    text-align: right;
+    margin-right: 2%;
+}
+ul.accountlinks {
+    padding: 0;
+    margin: 0;
+    float: right;
+    display: block;
+    width: 60%;
+}
+ul.accountlinks li {
+    display: inline-block;
+    margin: 0 2%;
+}
+ul.accountlinks li a {
+    color: #000;
+    font-size: 17px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 0px;
+    float: left;
+    display: block;
+}
+ul.accountlinks li:Last-child a {
+    color: #FEBB6B;
+    font-size: 17px;
+    border: 1px solid #FEBB6B;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+.callnow {
+    float: left;
+    display: block;
+    width: 40%;
+    text-align: right;
+    margin-right: 2%;
+}
+ul.accountlinks {
+    padding: 0;
+    margin: 0;
+    float: right;
+    display: block;
+    width: 54%;
+}
+ul.accountlinks li {
+    display: inline-block;
+    margin: 0 2%;
+}
+ul.accountlinks li a {
+    color: #000;
+    font-size: 17px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+ul.accountlinks li:Last-child a {
+    color: #FEBB6B;
+    font-size: 17px;
+    border: 1px solid #FEBB6B;
+    border-radius: 4px;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 17px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+ul.accountlinks li a:hover {
+  opacity:.7;
+}
+ul.accountlinks {
+    padding: 0;
+    margin: 0;
+    float: right;
+    display: block;
+    width: 60%;
+}
+.callnow {
+    float: left;
+    display: block;
+    width: 38%;
+    text-align: right;
+    margin-right: 2%;
+    font-size: 15px;
+    font-weight: 300;
+}
+#header-image {
+    width: 100%;
+    height: auto;
+    border: none;
+    margin-top: 15px;
+}
+#header-image h3 {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 39px;
+    margin-bottom: 10px;
+}
+ul.headlist {
+ padding:0;
+margin:0;
+
+}
+ul.headlist li {
+       font-size: 16px;
+    font-weight: 300; 
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/whitecheckmark.png') left center no-repeat;
+    padding-left: 10%;
+    background-size: 21px auto;
+}
+ul.headlist li a {
+ color:#fff;
+}
+.apex-slider a {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 212px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+}
+ul.headlist li {
+    font-size: 16px;
+    font-weight: 300;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/whitecheckmark.png') left center no-repeat;
+    padding-left: 8%;
+    background-size: 21px auto;
+    margin-bottom: 16px;
+    font-size: 21px;
+}
+p { 
+    font-size: 18px;
+    font-weight: 300;
+}
+#container-full {
+    padding: 0;
+    width: 100%;
+    float: left;
+    display: block;
+}
+#main {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    width: 100%; 
+      float: left;
+    display: block;
+}
+#sectionone, #sectiontwo, #sectionthree, #sectionfour {
+    float: left;
+    display: block;
+    width: 100%;
+}
+#sectiontwo, #sectionfour {
+  background:#F3F3F3;
+}
+#sectiononeinner {
+   
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 1024px;
+    text-align:left;
+}
+#sectiontwoinner {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 1024px;
+}
+#sectionthreeinner {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 1024px;
+}
+#sectionfourinner {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 1024px;
+}
+#sectionone h1 {
+    width: 750px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 41px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    text-align: center;
+}
+#sectionone h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+#primary, #content {
+  width:100%;
+  float:left;
+  display:block;
+}
+#sidebar {
+  display:none;
+}
+ul.foursteps {
+padding:0;
+margin:0;
+}
+ul.foursteps li {
+    width: 19%;
+    float: left;
+    display: block;
+    margin-right: 1%;
+}
+article { 
+    padding: 0;
+    margin: 0;
+}
+ul.foursteps li h4 {
+    font-family: "Lobster", arial, sans-serif !important;
+    color: #FFAA46;
+    font-size: 34px;
+    text-align: left;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/rightlongarrow.png') 80% center no-repeat;
+    background-size: 71px auto;
+    margin-bottom: 15px;
+}
+ul.foursteps li:last-child h4 {
+  background:none;
+}
+ul.foursteps li h1 {
+    font-size: 2.5em;
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+} 
+#loanform .gform_wrapper .top_label .gfield_label { 
+    font-size: 18px;
+    font-weight: 300;
+}
+#loanform .gform_wrapper {
+    overflow: inherit;
+    margin: 1em 0;
+    max-width: 98%;
+    float: left;
+    display: block;
+    width: 60%;
+}
+#loanform .gform_wrapper .top_label li.gfield.gf_right_half {
+    margin: 0 0 .5em;
+    width: 44.5%;
+    margin-top: 0px;
+}
+#loanform .gform_wrapper .top_label li.gfield.gf_left_half {
+    clear: left !important;
+    margin-right: 5.6%;
+    float: left;
+    width: 45%;
+}
+#loanform .gform_wrapper .top_label li.gfield.gf_left_half {
+    clear: left !important;
+    margin-right: 5.6%;
+    float: left;
+    width: 36%;
+}
+#loanform .gform_wrapper .top_label li.gfield.gf_right_half  .ginput_container_select {
+    width: 75%;
+}
+#loanform .gform_wrapper .gform_footer {
+    padding: 1em 0 .625em;
+    margin: 1em 0 0;
+    clear: both;
+    float: right;
+    margin-top: -55px;
+    margin-right: -70px;
+}
+#loanform {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#loanform .min-val-relation, #loanform .max-val-relation {
+    color: #000;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#loanform .noUi-horizontal .noUi-handle {
+    width: 20px !important;
+    height: 21px !important;
+}
+#loanform .noUi-handle {
+    margin-top: 0px !important;
+    box-shadow: none !Important;
+    margin-left: 2px !important;
+}
+ 
+#loanform .noUi-handle .tooltip span {
+    color: #000;
+    margin-top: -10px;
+    display: block;
+    float: left;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 300;
+}
+#loanform #field_7_1 .tooltip {
+    z-index: 1000;
+    min-width: 200px;
+    color: #000 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    font-size: 20px;
+    display: block !important;
+    border: none !important;
+    position: absolute;
+    margin-top: 15px;
+    color: #FFAA46 !important;
+    font-weight: 300 !important;
+}
+	  
+#loanform .noUi-target {
+    height: 8px !important;
+}
+#loanform .noUi-target {
+    height: 10px !important;
+    margin-top: 44px;
+}
+	  #loanform #field_7_1 .tooltip {
+    z-index: 1000;
+    min-width: 200px;
+    color: #000 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    font-size: 20px;
+    display: block !important;
+    border: none !important;
+    position: absolute;
+    margin-top: 0px;
+    color: #FFAA46 !important;
+    font-weight: 300 !important;
+}
+#loanform  .noUi-horizontal .noUi-handle {
+    cursor: pointer !Important;
+}
+#loanform .noUi-horizontal .noUi-handle {
+    border: 2px solid #FFAA46 !important;
+    border-radius: 33px !important;
+    background: #DEDEDE;
+    cursor: default;
+    box-shadow: none;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/threelines.png') center center no-repeat #fff !important;
+    width: 28px !important;
+    height: 28px !important;
+    margin-top: -3px !important;
+    box-shadow: none !Important;
+    margin-left: 2px !important;
+    background-size: 13px auto !important;
+    opacity: 1 !important;
+}
+#loanform .noUi-handle:after, #loanform .noUi-handle:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 14px;
+    width: 1px;
+    background: transparent !important;
+    left: 14px;
+    top: 6px;
+    border: none !important;
+}
+#loanform .min-val-relation, #loanform .max-val-relation {
+    color: #000;
+    font-size: 18px;
+}
+		#loanform .noUi-background {
+    background: #FFAA46 !Important;
+    box-shadow: none !Important;
+    border: none !Important;
+}
+	#loanform .noUi-origin {
+    border-radius: 2px;
+    background: #fff !important;
+}
+#loanform .noUi-background {
+    background: #FFAA46 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+#loanform .noUi-target {
+    height: 13px !important;
+    margin-top: 44px;
+}
+#loanform .slider-display[data-value-visibility=show] .noUi-handle .tooltip :after {
+  content: " MONTHS";
+}
+#loanform .gform_wrapper select, .gform_wrapper textarea {
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: normal;
+    padding: 7px;
+    border-color: #ccc;
+    border-radius: 5px;
+}
+#loanform .gform_wrapper .gform_footer input.button, #loanform .gform_wrapper .gform_footer input[type=image], #loanform .gform_wrapper .gform_footer input[type=submit] {
+    display: -moz-inline-stack;
+    display: inline-block;
+    color: #FFAA46;
+    border: 1px solid #FFAA46;
+    background: transparent;
+    font-size: 15px;
+    padding: 8px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#loanform .gform_wrapper .gform_footer input.button:hover, 
+#loanform .gform_wrapper .gform_footer input[type=image]:hover,
+#loanform .gform_wrapper .gform_footer input[type=submit]:hover {
+  opacity:.7;
+}
+#loanform .gform_wrapper .gform_footer {
+    padding: 1em 0 .625em;
+    margin: 1em 0 0;
+    clear: both;
+    float: right;
+    margin-top: -69px;
+    margin-right: -89px;
+}
+ul.foursteps li p {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+	margin:0 0 10px;
+	padding:0;
+}
+#sectionthree .caption.mainheadtxt {
+    position: relative;
+    color: #000;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    padding: 3px 10px;
+}
+#sectionthree h3 {
+    font-size: 1.5em;
+    line-height: 39px;
+    margin-bottom: 1em;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#sectionthree ul.headlist li {
+    font-size: 16px;
+    font-weight: 300;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/blackcheckmark.jpg') left center no-repeat;
+    padding-left: 8%;
+    background-size: 21px auto;
+    margin-bottom: 16px;
+    font-size: 21px;
+    text-align: left;
+    margin-left: 8%;
+}
+#sectionthree a.chevronlink {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 212px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    margin-left: 16%;
+}
+#sectionthree a.chevronlink:hover {
+  opacity:.7;
+}
+#sectionfour .sectioncontent {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    width: 80%;
+    margin: 0 auto;
+}
+#main {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    width: 70%;
+    float: none;
+    display: block;
+    padding: 35px 0;
+    margin: 35px auto 0 auto;
+    border-top: 1px solid #000;
+}
+.home #main {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    width: 100%;
+    float: left;
+    display: block;
+    padding: 0;
+}
+#footer-bottom {
+    background: none;
+    padding: 30px 0;
+    float: left;
+    display: block;
+    width: 100%;
+}
+#footer-content {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 70%;
+    margin: 0 auto;
+}
+#footer-content {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
+#footer-content a {
+  color:#000;
+}
+#footer-content a:hover {
+  opacity:.7;
+}
+.lrgheadtxt {
+    font-family: 'Raleway';
+    font-size: 42px;
+}
+.smheadtxt {  
+    font-size: 21px;
+}
+ul.headlist li {
+    font-size: 21px;
+    font-weight: 300;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/whitecheckmark.png') left 5px no-repeat;
+    padding-left: 10%;
+    background-size: 21px auto;
+    margin-bottom: 10px;
+    font-family: 'Philosopher';
+    line-height: 24px;
+}
+.apex-slider a {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 252px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+}
+.apex-slider a:hover {
+ opacity:.7;
+	  }
+#header-image h3 {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 200;
+    line-height: 46px;
+    margin-bottom: 11px;
+}
+	  #sectionone h1 {
+    width: 750px;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    line-height: 41px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    text-align: center;
+}
+a.ivfbut {
+		text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 252px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+	  }
+	  a.ivfbut:hover {
+		opacity:.7;
+	  }
+	  #sectiontwo h1 {
+    width: 750px;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    line-height: 41px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+	  #sectiononeinner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0 10px 0;
+    max-width: 1024px;
+    text-align: left;
+}
+	  #sectiontwoinner {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    max-width: 1224px;
+}
+ul.foursteps li {
+    width: 14%;
+    float: left;
+    display: block;
+    margin-right: 1%;
+	margin-bottom:0;
+	min-height: 100px !Important;
+}
+	  ul.foursteps li p {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    line-height: 23px;
+}
+ul.foursteps li:first-child {
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/icon1.jpg') center top no-repeat;
+    background-size: 140px auto;
+    padding-top: 133px;
+		  width: 13%;
+}
+	  	  ul.foursteps li:nth-child(2) {
+			background:url('http://onefertilityhealth.com/wp-content/uploads/2016/05/icon2.jpg') center top no-repeat;
+    background-size: 140px auto;
+    padding-top: 133px;
+		  width: 13%;
+	  }
+ul.foursteps li:nth-child(3) {
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/icon3.jpg') center top no-repeat;
+    background-size: 140px auto;
+    padding-top: 133px;
+    width: 17%;
+    margin-left: 1%;
+}
+ul.foursteps li:nth-child(4) {
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/icon4.jpg') center top no-repeat;
+    background-size: 140px auto;
+    padding-top: 133px;
+    width: 18%;
+}
+ul.foursteps li:nth-child(5) {
+    width: 32%;
+}
+ul.foursteps li:nth-child(5) a.ivfbut {
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 333px center no-repeat;
+    margin-top: 35px;
+    background-size: 12px auto;
+}
+	  #sectiontwo {
+    padding-bottom: 50px;
+}
+	  #sectiononenew {
+    float: left;
+    display: block;
+    width: 100%;
+}
+#sectiononenewinner  {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+	  #sectiononenew h1 { 
+    width: 750px;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    line-height: 41px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+	  #mortcalc h2.widgettitle {
+    display: none;
+}
+#mortcalc {
+    background: #F3F3F3;
+    padding: 40px;
+}
+#mortcalc  .lidd_mc_input label {
+    display: block;
+    margin-bottom: .25em;
+    font-size: 24px;
+    font-weight: 300;
+}
+.regtxt {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-weight: 300;
+}
+.orangetxt {
+  color:#FFAA46;
+}
+.calculationtxt {
+    font-family: 'Raleway';
+    font-size: 100px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    display: block;
+  font-weight: 300;
+    line-height: 121px;
+}
+.regtxtbut {
+    float: left;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.regtxtbut a.ivfbut {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: none;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 332px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+    margin-top: 50px;
+    display: block;
+    width: 300px;
+    margin: 40px auto;
+}
+#mortcalcouter {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+#sectiononenew #sectionnewtwo h1 { 
+    text-align: left; 
+      margin-bottom: 19px;
+}
+#sectionthree ul.headlist li {
+    font-size: 16px;
+    font-weight: 300;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/blackcheckmark.jpg') left center no-repeat;
+    padding-left: 8%;
+    background-size: 21px auto;
+    margin-bottom: 16px;
+    font-size: 21px;
+    text-align: left;
+    margin-left: 8%;
+}
+ul.headlist.onefertlist li {
+    font-size: 24px;
+    font-weight: 300;
+    background: none;
+    padding-left: 1%;
+    margin-left: 9%;
+    background-size: 21px auto;
+    margin-bottom: 10px;
+    font-family: 'Philosopher';
+    line-height: 31px;
+    list-style: disc;
+}
+#sectiononenewinner {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+}
+#sectiontwo {
+    padding-bottom: 50px;
+    background: none;
+}
+#loanform .noUi-origin {
+    border-radius: 1px;
+    background: #ccc !important;
+}
+#loanform .gform_wrapper .top_label li.gfield.gf_right_half {
+    margin: 0 0 .5em;
+    width: 44.5%;
+    margin-top: 45px;
+}
+#loanform .gform_wrapper {
+    overflow: inherit;
+    margin: 1em 0;
+    max-width: 98%;
+    float: left;
+    display: block;
+    width: 73%;
+}
+#sectionthreeinner {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1024px;
+    margin-top: -50px;
+}
+#sectionthreeinner {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1300px;
+    margin-top: -50px;
+}
+#sectionthree #sectionthreeinner a.chevronlink {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 212px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    margin-left: 16%;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 252px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 4px 60px 4px 20px;
+}
+#sectionthree h3 {
+    font-size: 1.5em;
+    line-height: 39px;
+    margin-bottom: 1em;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: auto;
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Raleway';
+    line-height: 41px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 19px;
+    text-transform: none;
+    max-width: 57%;
+    float: left;
+    margin-right: 43%;
+}
+#sectionthree ul.headlist li {
+    font-size: 16px;
+    font-weight: 300;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/blackcheckmark.jpg') left center no-repeat;
+    padding-left: 8%;
+    background-size: 21px auto;
+    margin-bottom: 16px;
+    font-size: 21px;
+    text-align: left;
+    margin-left: 1%;
+    float: left;
+    display: block;
+    width: 68%;
+}
+#sixblocks ul li img {
+    max-width: 100%;
+    height: auto;
+}
+#sixblocks ul li {
+    width: 30%;
+    margin-right: 3%;
+    float: left;
+    display: block;
+    margin-bottom: 26px;
+}
+#sixblocks ul li  a:hover {
+  opacity:.7;
+}
+.lowertxtdiv {
+    /* float: left; */
+    display: block;
+    width: 85%;
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0 auto;
+    text-align: left;
+}
+h1.regh1 {
+    font-size: 29px;
+    width: 480px;
+    margin: 0 auto;
+    line-height: 43px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+ul.rightchart {
+    float: left;
+    margin-top: 100px;
+    font-size: 24px;
+    text-align: left;
+    font-family: 'Raleway' !important;
+}
+ul.rightchart li {
+    font-family: "Raleway", arial, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 25px;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/blackcheckmark.jpg') 0 8px no-repeat;
+    padding-left: 8%;
+    background-size: 25px auto;
+    list-style: none;
+}
+#parsect p, #parsect h4 {
+    text-align: center;
+}
+ #parsect h4 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+ #parsect .sue-section-content {
+max-width: 760px;
+}
+ #parsect .sue-section { 
+background-size: 100% auto !important;
+}
+ul.rightchart {
+   margin-top: 100px !important;
+  float:left; 
+  width:100%;
+  display:block;
+}
+.gform_wrapper .gf_progressbar_wrapper { 
+    display: none !important;
+}
+	.toppage {
+    background: #2F2B39;
+    color: #fff;
+    width: 100%;
+    float: left;
+    padding: 50px 0;
+    text-align: center;
+}
+.page-template-fullwidth .gform_wrapper li#field_2_19 {
+    max-width: 100%;
+}
+.page-template-fullwidth .gform_wrapper {
+    overflow: inherit;
+    margin: 1em 0;
+    max-width: 100%;
+}
+.toppage h1 {
+    color: #fff;
+    font-weight: 300 !important;
+margin-bottom:0;
+}
+.page-template-fullwidth .gform_body {
+    background: #f3f3f3 !Important;
+    float: left;
+    display: block;
+    width: 100%;
+}
+	.lowtoppage {
+    float: left;
+    display: block;
+    width: 60%;
+    margin: 50px 20% 30px 20%;
+}
+.lowtoppage h2 {
+    font-size: 28px;
+    font-weight: 300;
+}
+	  li#field_2_1,
+li#field_2_2,
+li#field_2_3,
+li#field_2_4,
+li#field_2_5,
+li#field_2_6,
+li#field_2_10,
+li#field_2_11,
+li#field_2_12,
+li#field_2_13,
+li#field_2_14,
+li#field_2_15,
+li#field_2_16,
+li#field_2_20,
+li#field_2_21,
+li#field_2_22,
+li#field_2_23,
+li#field_2_24,
+li#field_2_25,
+li#field_2_26,
+li#field_2_27,
+li#field_2_28,
+li#field_2_29,
+li#field_2_30,
+li#field_2_31,
+li#field_2_32,
+li#field_2_33,
+.page-template-fullwidth .gform_page_footer
+ {
+    width: 44%;
+    margin: 0 20% !Important;
+    float: left;
+    display: block;
+}
+
+li#field_2_7 {
+    width: 13%;
+    margin: 0 0 0 20% !Important;
+    float: left;
+    display: block;
+}
+li#field_2_8 {
+     width: 13%;
+    margin: 0 0 0 1% !Important;
+    float: left;
+    display: block;
+}
+li#field_2_9 {
+      width: 13%;
+    margin: 0 0 0 1% !Important;
+    float: left;
+    display: block;
+}
+	  .page-template-fullwidth select {
+			padding: 5px;
+	font-size:16px;
+			}
+ .page-template-fullwidth .gform_wrapper .top_label .gfield_label {
+    margin: .625em 0 .5em;
+    font-weight: 700;
+    display: -moz-inline-stack;
+    display: inline-block;
+    line-height: 1.3;
+    clear: both;
+    font-size: 18px;
+    font-weight: 300;
+}
+.page-template-fullwidth .gform_wrapper .top_label input.medium { 
+    padding: 8px;
+}
+.page-template-fullwidth li#field_2_8 select {
+    margin-top: 25px;
+}
+ .page-template-fullwidth li#field_2_9 select {
+    margin-top: 25px;
+}
+ .page-template-fullwidth .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select {
+    margin-left: .063em;
+    padding: 12px;
+}
+ .page-template-fullwidth .gform_wrapper label#label_2_14_1 {
+    display: block;
+    margin: 0 0 5px 24px;
+    padding: 0;
+    width: auto;
+    line-height: 1.5;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 300;
+}
+.page-template-fullwidth .gform_wrapper .gform_page_footer .button.gform_next_button, .page-template-fullwidth .gform_wrapper .gform_page_footer .button.gform_previous_button {
+    display: -moz-inline-stack;
+    display: inline-block;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: none;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 242px center no-repeat;
+    background-size: 11px auto;
+    /* padding-right: 32px; */
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+    margin-top: 50px;
+    display: block;
+    width: 300px;
+    margin: 0;
+    margin-top: -275px;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+}
+.termstxt {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 4%;
+    margin-bottom: 15px;
+}
+#lowerformtxt {
+    width: 150%;
+    font-size: 14px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+ .page-template-fullwidth  .gform_wrapper .gform_page_footer { 
+    border-top: none; 
+}
+					  .page-template-fullwidth .gform_wrapper .gform_page_footer .button.gform_next_button:hover, .page-template-fullwidth .gform_wrapper .gform_page_footer .button.gform_previous_button:hover {
+							  opacity:.7;
+							  }
+  .page-template-fullwidth .gform_wrapper li.gfield_html {
+    max-width: 100% !important;
+    margin-top: -5px !important;
+}
+.page-template-fullwidth .gform_wrapper .gform_page_footer .button.gform_button, .page-template-fullwidth .gform_wrapper #gform_page_2_2 .gform_page_footer .button.gform_next_button, .page-template-fullwidth .gform_wrapper #gform_page_2_2 .gform_page_footer .button.gform_previous_button {
+    display: -moz-inline-stack;
+    display: inline-block;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: none;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 242px center no-repeat;
+    background-size: 11px auto;
+    /* padding-right: 32px; */
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+    margin-top: 50px;
+    display: block;
+    width: 300px;
+    margin: 0;
+    margin-top: 0;
+    position: relative;
+    z-index: 99;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.page-template-fullwidth     .gform_wrapper #gform_page_2_2 .gform_page_footer .button.gform_previous_button {
+display:none;
+}
+.page-id-77 .page-entry-content {
+    background: #f3f3f3;
+}
+.acceptbut a, p.form-submit input {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: none;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 254px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+    margin-top: 50px;
+    display: block;
+    width: 211px;
+    margin: 0;
+opacity:1;
+}
+.acceptbut a:hover, p.form-submit input:hover {
+opacity:.7;
+}
+#footer-content {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    border-top: 1px solid #000;
+    padding-top: 25px;
+}
+#footer-content .column {
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+img.wp-image-42  {
+    width: 200px;
+    height: auto;
+}
+#footer-content a {
+    color: #FEAA46;
+}
+#footer-content .column ul li {
+    display: inline-block;
+    padding: 0 34px 0 0;
+}
+#footer-content .column ul li a {
+    color: #000;
+     font-size: 16px;
+}
+#footer-content .column ul li a:hover {
+    color: #000; 
+  opacity:.7;
+}
+.footertxts  {
+    font-size: 14px;
+}
+#wppb-register-user li {
+    float: left;
+    display: block;
+    width: 100%;
+}
+#wppb-register-user li label { 
+    float: left;
+    display: block;
+    width: 100%;
+}
+  .page-template-fullwidth #main {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    width: 100%;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-top: none;
+}
+  .home #main {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    width: 100%;
+    float: left;
+    display: block;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+#FindClinic {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 50px 0;
+}
+#FindClinic h1 {
+    text-align: center;
+    font-weight: 300;
+}
+#FindClinic h2 {
+    text-align: center;
+    font-weight: 300;
+}
+#FindClinic img.wp-image-51 {
+    width: 700px;
+    height: auto;
+    padding: 80px 0 0 0;
+}
+#FindClinic #sectionone h1 { 
+    margin-bottom: 52px;
+    text-align: center;
+}
+#FindClinic #loanform {
+    float: none;
+    display: block;
+    width: 80%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.page-template-fullwidth #FindClinic .gform_body {
+    background: #fff !Important;
+    float: left;
+    display: block;
+    width: 100%;
+}
+	.page-template-fullwidth #FindClinic .gform_wrapper .top_label li.gfield.gf_right_half {
+    margin: 0 0 .5em;
+    width: 98.5%;
+}
+.page-template-fullwidth #FindClinic .gform_body {
+    background: #fff !Important;
+    float: left;
+    display: block;
+    width: 85%;
+}
+#FindClinic .gform_wrapper .gform_footer input.button, #FindClinic .gform_wrapper .gform_footer input[type=image], #FindClinic .gform_wrapper .gform_footer input[type=submit] {
+    display: -moz-inline-stack;
+    display: inline-block;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 134px center no-repeat;
+    background-size: 9px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+    cursor: pointer;
+}
+#FindClinic .gform_wrapper .gform_footer input.button:hover, #FindClinic .gform_wrapper .gform_footer input[type=image]:hover, #FindClinic .gform_wrapper .gform_footer input[type=submit]:hover{ 
+  opacity:.7;
+}
+#FindClinic .gform_footer {
+    float: right;
+    clear: none;
+    width: 15%;
+    margin-top: 6px;
+}
+#zipcodesearch {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+#FindClinic  .gform_wrapper .top_label li.gfield.gf_right_half input.large {
+    padding: 0px 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.page-template-fullwidth #FindClinic #loanform .gform_body {
+    background: #f3f3f3 !Important;
+    float: left;
+    display: block;
+    width: 85%;
+}
+#FindClinic #loanform .gform_wrapper .gform_footer input.button, #FindClinic #loanform .gform_wrapper .gform_footer input[type=image], #FindClinic #loanform .gform_wrapper .gform_footer input[type=submit] { 
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 195px center no-repeat;
+}
+
+/* Directory CSS */
+#clinicresults {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+}
+ul.cliniclist li {
+    float: left;
+    width: 48%;
+    display: inline;
+    margin-right: 1%;
+    display: inline-block;
+    float: none;
+}
+ul.cliniclist li {
+    margin-bottom: 15px;
+}
+ul.cliniclist li:nth-child(1), ul.cliniclist li:nth-child(3), ul.cliniclist li:nth-child(6), ul.cliniclist li:nth-child(8) {
+    clear: left;
+}
+ul.cliniclist li:nth-child(3), ul.cliniclist li:nth-child(4), ul.cliniclist li:nth-child(5), ul.cliniclist li:nth-child(8), ul.cliniclist li:nth-child(9), ul.cliniclist li:nth-child(10) {
+    width: 31%;
+}
+.fertblk {
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 99%;
+    min-height: 120px;
+}
+#LAStyle .innerferttxt {
+    min-height: 98px;
+}
+.innerferttxt {
+    padding: 0 20px;
+    display: block;
+}
+#LAStyle .fertblk h3 {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.fertdesc {
+    font-size: 13px;
+    display: block;
+    min-height: 150px;
+}
+.innerferttxt a {
+    color: #DA6D92;
+}
+#LAStyle .fertloc {
+    background: url('http://lylyslist.com/wp-content/uploads/2016/05/mappointer.png') left center no-repeat;
+    font-size: 15px;
+    padding: 2px 0 2px 2%;
+    background-size: 12px auto;
+    margin-bottom: 5px;
+    display: block;
+    float: left;
+    margin-top: -7px;
+    width: 98%;
+    font-weight: 300;
+}
+.fertpricediv {
+    float: right;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+#LAStyle .fertpricediv ul li:first-child, #LAStyle #threecol .fertpricediv ul li:first-child {
+    list-style: none;
+    background: none;
+    width: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    float: right;
+    font-size: 17px;
+    font-size: 42px;
+    font-weight: bold;
+    color: #DA6D92;
+}
+#LAStyle .fertpricediv ul li:last-child, #LAStyle #threecol .fertpricediv ul li:last-child {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    list-style: none;
+    float: right;
+    margin-top: -23px;
+    clear: both;
+    margin-bottom: 18px;
+    width: 100%;
+    text-align: right;
+    min-height: 50px;
+}
+#ListView ul.cliniclist li {
+    width: 98% !important;
+    float: left;
+    display: block;
+    clear: both;
+}
+#ListView .fertblk {
+    border: none;
+}
+.fertblk {
+    border: 1px solid #ccc;
+    float: left;
+    display: block;
+    width: 99%;
+    min-height: 120px;
+}
+#ListView .innerferttxt {
+    padding: 10px 20px;
+    display: block;
+}
+#LAStyle .innerferttxt {
+    min-height: 98px;
+}
+#LAStyle .fertblk h3 {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 0;
+    font-weight: 500;
+    min-height: 32px;
+}
+#LAStyle .fertblk h3 a {
+  color:#000;
+}
+.innerferttxt a { 
+    color: #FEBB6B;
+}
+  ul.cliniclist {
+    padding: 0;
+    margin: 0;
+}
+  #ListView .innerferttxt {
+    padding: 10px 2px;
+    display: block;
+}
+/* END DIRECTORY CSS */
+#sidebar-widget-title {
+    color: #545350;
+    color: #545350;
+    float: left;
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 300;
+}
+  #sideform {
+    float: left;
+    display: block;
+    width: 98%;
+    margin-top: 20px;
+}
+#sideform ul {
+    padding: 0;
+    margin: 0;
+}
+#sideform ul li {
+    float: left;
+    display: block;
+    width: 90%;
+    padding: 8px 5%;
+    border-bottom: 1px solid #f0f0f0;
+}
+#sideform ul li a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #000;
+}
+  .page-template-page-with-sidebar #primary  {
+    width: 68%;
+    float: right;
+    display: block;
+}
+#sidebar {
+display:none;
+}
+.page-template-page-with-sidebar #sidebar {
+ float:left; 
+display:block;
+width:28%;
+}
+article ul li { 
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    list-style: disc;
+}
+article ol li { 
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    list-style: decimal;
+}
+article ul {
+    padding-left: 25px;
+}
+article a {
+    color: #FEBB6B; 
+}
+#lidd_mc_form {
+    float: left;
+    width: 50%;
+    display: block;
+}
+#lidd_mc_details {
+    float: right;
+    display: block;
+    width: 46%;
+}
+#mortcalc {
+    background: #F3F3F3;
+    padding: 40px;
+    float: left;
+    display: block;
+    /* width: 100%; */
+}
+#mortcalc {
+    background: #fff;
+    padding: 40px;
+    float: left;
+    display: block;
+    width: 100%;
+}
+#lidd_mc_results {
+    display: none;
+}
+.lidd_mc_summary_light {
+    color: #333;
+    background: #fff;
+    border: none;
+}
+.nodisplay {
+    display: none;
+}
+.lidd_mc_b {
+    font-weight: bold;
+    font-family: 'Raleway';
+    font-size: 100px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    display: block;
+    font-weight: 300;
+    line-height: 123px;
+    color: #FFAA46;
+    margin-top: -16px;
+}
+ 
+#lidd_mc_summary b {
+    font-weight: bold;
+    display: none;
+}
+#lidd_mc_summary .displaytxt b  {
+    font-weight: 300 !important;
+    display: block;
+}
+  .lidd_mc_summary_light { 
+    border: none !important;
+}
+	#lidd_mc_submit {
+    display: inline-block;
+    color: #FFAA46;
+    border: 1px solid #FFAA46;
+    background: transparent;
+    font-size: 15px;
+    padding: 8px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#lidd_mc_submit:hover {
+opacity:.7;
+}
+	  #lidd_mc_form {
+    float: left;
+    width: 45%;
+    display: block;
+    background: #f3f3f3;
+    padding: 30px 4%;
+}
+#sectiontwo #loanform .gform_wrapper .top_label li.gfield.gf_right_half {
+    margin: 0 0 .5em;
+    width: 44.5%;
+    margin-top: 29px;
+}
+#sectiontwo #loanform .gform_wrapper .gform_footer {
+    padding: 1em 0 .625em;
+    margin: 1em 0 0;
+    clear: both;
+    float: right;
+    margin-top: -88px;
+    margin-right: -6px;
+}
+#loanform .gform_wrapper .gform_footer input.button, #loanform .gform_wrapper .gform_footer input[type=image], #loanform .gform_wrapper .gform_footer input[type=submit] {
+    display: -moz-inline-stack;
+    display: inline-block;
+    color: #FFAA46;
+    border: 1px solid #FFAA46;
+    background: transparent;
+    font-size: 15px;
+    padding: 12px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#leftsingle {
+    float: left;
+    display: block;
+    width: 56%;
+    margin-right: 0%;
+}
+#rightsingle {
+    float: right;
+    width: 41%;
+    margin-right: 0%;
+    display: block;
+}
+.gform_wrapper .gform_page_footer {
+    margin: 1.25em 0;
+    width: 100%;
+    border-top: 1px dotted #CCC;
+    padding: 1em 0 0;
+    clear: both;
+    float: left;
+}
+.page-template-fullwidth .gform_wrapper .gform_page_footer .button.gform_next_button, .page-template-fullwidth .gform_wrapper .gform_page_footer .button.gform_previous_button {
+ 
+    margin-top: 0 !important; 
+}
+.page-template-fullwidth .gform_wrapper .gform_page_footer {
+    border-top: none;
+    margin-bottom: 35px !important;
+}
+body { 
+    min-height: 900px;
+}
+#overlaytrans {
+    background: rgba(255,255,255,0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 900px;
+    z-index: 99999;
+}
+#showformdiv {
+    width: 50%;
+    position: absolute;
+    top: 150px;
+    left: 25%;
+    z-index: 99999;
+    padding: 0;
+}
+#showformdiv {
+    width: 50%;
+    position: fixed;
+    top: 80px;
+    left: 25%;
+    z-index: 99999;
+    padding: 0;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
+}
+.showforminner {
+    padding: 40px;
+    background: #f3f3f3;
+}
+#showformdiv h1 {
+    text-align: center;
+    color: #FFAA46;
+    font-weight: 300;
+    font-size: 41px;
+    width: 80%;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    display: block;
+}
+#showformdiv h2 {
+    color: #96B4D7;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+#showformdiv h3 {
+    font-size: 28px;
+    color: #313131;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+#showformdiv .gform_wrapper .hidden_label input.large, 
+#showformdiv .gform_wrapper .hidden_label select.large, 
+#showformdiv .gform_wrapper .top_label input.large, 
+#showformdiv .gform_wrapper .top_label select.large { 
+    font-size: 14px;
+}
+
+#showformdiv  input:focus {
+ color: #FEBB6B;
+  border: 2px solid #FEBB6B;
+}
+input::-webkit-input-placeholder {
+   color: #888; 
+}
+input:focus::-webkit-input-placeholder {
+color: #FEBB6B; 
+}
+
+/* Firefox < 19 */
+input:-moz-placeholder {
+  color: #888;
+}
+input:focus:-moz-placeholder {
+ color: #FEBB6B; 
+}
+
+/* Firefox > 19 */
+input::-moz-placeholder {
+    color: #999;
+}
+input:focus::-moz-placeholder {
+   color: #FEBB6B; 
+}
+
+/* Internet Explorer 10 */
+input:-ms-input-placeholder {
+     color: #888;
+}
+input:focus:-ms-input-placeholder {
+   color: #FEBB6B; 
+}
+#showformdiv  select:focus  {
+ color: #444;
+  border: 2px solid #FEBB6B;
+}
+#showformdiv  .gform_wrapper .gform_footer input.button, 
+#showformdiv  .gform_wrapper .gform_footer input[type=image], 
+#showformdiv  .gform_wrapper .gform_footer input[type=submit] { 
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 112px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 4px 60px 4px 30px;
+  cursor:pointer;
+}
+#showformdiv  .gform_wrapper .gform_footer input.button:hover, 
+#showformdiv  .gform_wrapper .gform_footer input[type=image]:hover, 
+#showformdiv  .gform_wrapper .gform_footer input[type=submit]:hover { 
+   opacity:.7;
+}
+#showformdiv input[type="text"], #showformdiv select {
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0;
+    
+}
+#showformdiv select {
+color:#888;
+    font-size: 18px;
+    padding: 11px 7px;
+}
+.page-template-fullwidth #showformdiv  .gform_wrapper .top_label .gfield_label { 
+    display: none;
+}
+#showformdiv .gform_wrapper .gform_footer {
+    padding: 0;
+    margin: 0 0 40px 0;
+    clear: both;
+}
+.showforminner {
+    padding: 40px 40px 50px 40px;
+    background: #f3f3f3;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/wonteffect.jpg')210px 99% no-repeat #f3f3f3;
+    background-size: 250px auto;
+}
+#header-image #slide2txt h3 {
+    color: #000;
+    font-weight: bold;
+}
+#header-image #slide2txt h4 {
+    font-size: 32px;
+    font-weight: 300;
+    border-top: 1px solid #000;
+    padding-top: 12px;
+    margin-bottom: 0;
+}
+#FindClinic {
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0 0 50px 0;
+}
+#findclinichead {
+    float: left;
+    display: block;
+    width: 100%;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/clinicslide.jpg')left top no-repeat;
+    padding: 40px 0 442px 0;
+    background-size: 100% auto;
+}
+#findclinicheadmsg {
+    margin: 0 auto;
+    display: block;
+    width: 60%; 
+    color: #fff;
+}
+#FindClinic h1 {
+    text-align: center;
+    font-weight: 300;
+    color: #000;
+    padding: 20px 0 0 0;
+    margin: 0 0 5px 0;
+}
+#FindClinic #findclinichead h1 {
+      color: #fff;
+      text-align: center;
+    font-weight: 300; 
+    padding: 20px 0 0 0;
+    margin: 0 0 5px 0;
+}
+#FindClinic h2 {
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+#findclinicfloat {
+    float: left;
+    width: 100%;
+    display: block;
+    background: rgba(0,0,0,0.6);
+    padding-bottom: 20px;
+}
+.page-template-fullwidth #FindClinic #findclinicfloat .gform_body {
+    background: transparent !Important;
+    float: left;
+    display: block;
+    width: 85%;
+}
+	.page-template-fullwidth #findclinicfloat  .gform_wrapper {
+    overflow: inherit;
+    margin: 0;
+    max-width: 100%;
+}
+		.page-template-fullwidth #findclinicfloat  .gform_wrapper .top_label .gfield_label {
+    margin: .625em 0 .5em;
+    font-weight: 700;
+    display: -moz-inline-stack;
+    display: inline-block;
+    line-height: 1.3;
+    clear: both;
+    font-size: 18px;
+    font-weight: 300;
+    display: none;
+}
+			#FindClinic #findclinicfloat .gform_footer {
+    float: right;
+    clear: none;
+    width: 15%;
+    margin-top: -2px;
+    padding: 0;
+}
+#zipcodesearch {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+#FindClinic .gform_footer {
+    float: right;
+    clear: none;
+    width: 15%;
+    margin-top: -2px;
+    padding: 0;
+    margin-right: 5%;
+}
+.page-template-fullwidth #FindClinic #findclinicfloat .gform_body {
+    background: transparent !Important;
+    float: left;
+    display: block;
+    width: 80%;
+}
+#FindClinic #sectionone h1 {
+    margin-bottom: 52px;
+    text-align: center;
+    float: none;
+    width: 67%;
+    margin: 0 auto 50px auto;
+}
+.starttreat {
+    font-family: 'Philosopher';
+    font-size: 34px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    line-height: 41px;
+    margin-top: 7px;
+}
+.page-id-19 #loanform #gform_wrapper_1.gform_wrapper .gform_footer input.button, .page-id-19 #loanform #gform_wrapper_1.gform_wrapper .gform_footer input[type=image], .page-id-19 #loanform #gform_wrapper_1.gform_wrapper .gform_footer input[type=submit] {
+    display: -moz-inline-stack;
+    display: inline-block;
+    color: #FFAA46;
+    border: 1px solid #FFAA46;
+    background: transparent;
+    font-size: 15px;
+    padding: 11px 60px 11px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.page-id-19 #FindClinic #loanform #gform_wrapper_1.gform_wrapper .gform_footer input.button, .page-id-19 #FindClinic #loanform #gform_wrapper_1.gform_wrapper .gform_footer input[type=image], .page-id-19 #FindClinic #loanform #gform_wrapper_1.gform_wrapper .gform_footer input[type=submit] {
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 145px center no-repeat;
+    background-size: 10px auto;
+}
+.page-id-19 #sectiontwo #loanform #gform_wrapper_1.gform_wrapper .gform_footer {
+        padding: 0em 0 .625em;
+    margin: 1em 0 0;
+    clear: both;
+    float: right;
+    margin-top: -88px;
+    margin-right: 128px;
+}
+#lidd_mc_details {
+    display: block !important;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/amorizatin.jpg') center top no-repeat;
+    min-height: 295px;
+}
+#lidd_mc_summary { 
+    background: #fff;
+}
+a.disclaimerbut {
+    position: absolute;
+    bottom: 95px;
+    left: 42%;
+    color: #000;
+}
+a.disclaimerbut:hover {
+ opacity:.7;
+}
+#mortcalc { 
+    position: relative;
+}
+#access ul li:hover ul {
+    background: rgba(0,0,0,0.8);
+    width: 260px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+#access ul li:hover ul li a {
+    color: #fff;
+    font-size: 18px;
+    float: left;
+    display: block;
+    width: auto;
+}
+nav[role="navigation"] ul li ul li {
+    display: block;
+    position: relative;
+    float: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#access ul li:hover ul {
+    background: rgba(255,255,255,0.9);
+    width: 304px;
+    position: absolute;
+    top: 40px;
+    left: 4px;
+    padding-bottom: 21px;
+}
+#access ul li:hover ul li a {
+    color: #000;
+    font-size: 16px;
+    float: left;
+    display: block;
+    width: auto;
+}
+nav[role="navigation"] ul li {
+    height: 2em;
+    clear: both;
+    display: inline-block;
+    position: relative;
+}
+#access ul li:hover ul li a:hover {
+    color: #FEBB6B;
+}
+.page-id-17 #footer-bottom {
+display:none;
+}
+#showformdiv {
+    width: 50%;
+    position: fixed;
+    top: 40px;
+    left: 25%;
+    z-index: 99999;
+    padding: 0;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
+}
+#showformdiv h1 {
+    text-align: center;
+    color: #FFAA46;
+    font-weight: 300;
+    font-size: 33px;
+    width: 64%;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    display: block;
+}
+#showformdiv h2 {
+    color: #96B4D7;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+#showformdiv h3 {
+    font-size: 23px;
+    color: #313131;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
+ .showforminner { 
+    position: relative;
+}
+#closebut {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.lidd_mc_input.pmtper {
+     visibility: hidden;
+    height: 0;
+}
+#sectiononenew {
+    float: left;
+    display: block;
+    width: 100%;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/calarrow.png') 7% 81px no-repeat;
+}
+#mortcalc {
+    background: transparent;
+}
+#footer-content p, #footer-content .footertxts {
+    font-size: 14px; 
+}
+#footer-content .column ul li a { 
+    font-size: 14px;
+}
+#footer-content .column ul li {
+    display: inline-block;
+    padding: 0 24px 0 0;
+}
+#loanform .gform_wrapper select, .gform_wrapper textarea { 
+    font-size: 16px;
+    font-weight: 300;
+}
+ #showformdiv h2 {
+    color: #FFAA46;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+#showformdiv h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    font-size: 33px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    display: block;
+}
+.rmcp-form-responsive {
+    width: 100%;
+    float: left;
+    width: 45% !important;
+    display: block;
+    background: #f3f3f3;
+    padding: 30px 4%;
+}
+.rmcp-input label {
+    display: block;
+    display: block;
+    margin-bottom: .25em;
+    font-size: 24px;
+    font-weight: 300;
+}
+#rmcp_input_1_4 {
+    display: inline-block;
+    color: #FFAA46;
+    border: 1px solid #FFAA46;
+    background: transparent;
+    font-size: 15px;
+    padding: 8px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+
+#mortcalc div.rmcp-input:nth-child(2) { 
+    visibility: hidden;
+height:0;
+}
+.rmcp-results.rmcp-results-5 {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    width: 32%;
+    background: #fff;
+    z-index: 99;
+}
+.rmcp-results.rmcp-results-5 ul li {
+    font-size: 27px;
+    text-align: center;
+    font-weight: 300; 
+    list-style: none;
+}
+	.rmcp-results.rmcp-results-5 li:nth-child(2) {
+    font-size: 87px;
+    font-family: 'Raleway';
+    margin-top: -21px;
+    color: #FEBB6B;
+}
+
+.rmcp-results.rmcp-results-5 li:nth-child(4) a {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 30px;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 299px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+}
+#mortcalcouter { 
+    position: relative;
+}
+#defaultmort {
+    /* position: absolute; */
+    position: absolute;
+    right: 5.3%;
+    top: 22.5%;
+    width: 32%;
+}
+#defaultmort ul li {
+    font-size: 27px;
+    text-align: center;
+    font-weight: 300;
+    list-style: none;
+}
+#defaultmort li:nth-child(2) {
+    font-size: 87px;
+    font-family: 'Raleway';
+    margin-top: -21px;
+    color: #FEBB6B;
+}
+
+#defaultmort li:nth-child(4) a {
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+   font-size: 20px;
+    margin-top: 15px;
+    margin-left: 30px;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 299px center no-repeat;
+    background-size: 11px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 60px 8px 30px;
+}
+.rmcp-form-light input[type='text'], .rmcp-form-light textarea {
+    padding: 5px; 
+    font-weight: 300;
+    font-family: 'Roboto';
+    font-size: 18px;
+}
+.page-id-82 .mainheadtxt p {
+    text-align: left;
+}
+.page-id-82 #sectionthree {
+    margin-top: 50px;
+}
+.page-id-82 #sectionthreeinner {
+    text-align: center;
+    width: 71%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1300px;
+    margin-top: -50px;
+}
+#blueblocks {
+    float: left;
+    display: block;
+    width: 100%;
+}
+.blueblocksinner {
+    width: 92.7%;
+    margin: 0 0 25px 2%;
+    display: block;
+    background: #5ACBFF;
+}
+#blueblocks img {
+    max-width: 80%;
+    height: auto;
+    padding: 27px 10%;
+}
+#blueblocks .ivfinners {
+    float: right;
+    display: block;
+    width: 100%;
+    margin: 80px 0 0 0;
+    text-align: left;
+}
+#blueblocks .ivfinners h1 {
+    font-size: 62px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#blueblocks .ivfinners h2 {
+    font-family: 'Philosopher';
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+#blueblocks .ivfinners {
+    margin-top: 60px;
+    overflow: hidden;
+}
+#blueblocks .ivfinners a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    padding: 8px 60px 8px 20px;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/08/whicon.png') 84% center no-repeat;
+    background-size: 16px auto;
+}
+#blueblocks .ivfinners a:hover {
+  opacity:.7;
+}
+.page-template-bestivfdeals #sidebar {
+    display: block;
+    width: 28%;
+    float: left;
+}
+.page-template-bestivfdeals #primary {
+    width: 68%;
+    float: right;
+    display: block;
+}
+.page-template-bestivfdeals #sideform ul li a {
+    font-size: 18px;
+    font-weight: 300;
+    color: #000; 
+    font-family: "Raleway", arial, sans-serif;
+}
+ ul.cliniclist li:nth-child(1), ul.cliniclist li:nth-child(3), ul.cliniclist li:nth-child(6), ul.cliniclist li:nth-child(8) {
+    clear: left;
+}
+.clinic-column img {
+    max-width: 100%;
+    height: auto;
+}
+	.innerferttxt a {
+    color: #000;
+    font-family: "Raleway", arial, sans-serif;
+    text-transform: none;
+}
+	.fertloc {
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/08/mappointer.png') left center no-repeat;
+    font-size: 15px;
+    padding: 2px 0 2px 8%;
+    background-size: 12px auto;
+    margin-bottom: 5px;
+    display: block;
+    float: left;
+    margin-top: -7px;
+    width: 92%;
+    font-weight: 300;
+}
+	.clinic-column p {
+    font-size: 14px;
+    font-weight: 300;
+}
+#LAStyle .fertloc {
+    background: url('http://lylyslist.com/wp-content/uploads/2016/05/mappointer.png') left center no-repeat;
+    font-size: 15px;
+    padding: 2px 0 2px 20px;
+    background-size: 12px auto;
+    margin-bottom: 5px;
+    display: block;
+    float: left;
+    margin-top: -7px;
+    width: auto;
+    font-weight: 300;
+}
+.locationinfo .fertdesc {
+    font-size: 13px;
+    display: block;
+    min-height: 0;
+}
+#gform_wrapper_6 {
+    float: left;
+    display: block;
+    width: 100%;
+}
+#gform_wrapper_6 select {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+      font-family: "Raleway", arial, sans-serif;
+    padding: 9px 10px;
+    margin-bottom: 0;
+}
+#gform_wrapper_6 input[type=text] {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    font-family: "Raleway", arial, sans-serif;
+    padding: 0px 10px;
+    margin-bottom: 0;
+    margin-top: -15px;
+}
+#gform_wrapper_6 .gform_footer input.button, 
+#gform_wrapper_6  .gform_footer input[type=submit], 
+#gform_wrapper_6  .gform_page_footer input.button, 
+#gform_wrapper_6 .gform_page_footer input[type=submit] {
+    font-size: 15px;
+    width: auto;
+    margin: 0 16px 0 0;
+    color: #FEAA46;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #FEAA46;
+    padding: 8px 30px;
+    cursor:pointer;
+}
+#gform_wrapper_6 .gform_footer input.button:hover, 
+#gform_wrapper_6  .gform_footer input[type=submit]:hover, 
+#gform_wrapper_6  .gform_page_footer input.button:hover, 
+#gform_wrapper_6 .gform_page_footer input[type=submit]:hover {
+  opacity:.7;
+}
+#gform_wrapper_6 ::-webkit-input-placeholder {
+   color: black;
+         font-family: "Raleway", arial, sans-serif;
+}
+
+#gform_wrapper_6 :-moz-placeholder { /* Firefox 18- */
+   color: black;
+    font-family: "Raleway", arial, sans-serif;
+}
+
+#gform_wrapper_6 ::-moz-placeholder {  /* Firefox 19+ */
+   color: black;
+    font-family: "Raleway", arial, sans-serif;
+}
+
+#gform_wrapper_6 :-ms-input-placeholder {  
+   color: black;
+     font-family: "Raleway", arial, sans-serif;
+}
+#LAStyle .fertpricediv ul li:first-child, #LAStyle #threecol .fertpricediv ul li:first-child {
+    list-style: none;
+    background: none;
+    width: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    float: right;
+    font-size: 17px;
+    font-size: 42px;
+    font-weight: bold;
+    color: #FEAA46;
+}
+h3 {
+    font-size: 1.4em; 
+}
+.twocol .fertcond h2 {
+    font-size: 1.4em;
+}
+.fertlocbreak {
+    float: left;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+}
+.lightxt {
+	font-weight:300;
+  }
+  .single-clinicpromos article #rightsingle #LAStyle .fertpricediv ul {
+    padding-left: 0;
+}
+.single-clinicpromos #LAStyle .fertpricediv ul li:last-child, .single-clinicpromos #LAStyle #threecol .fertpricediv ul li:last-child {
+    font-size: 17px;
+    font-weight: 400;
+    color: #000;
+    list-style: none;
+    float: right;
+    margin-top: -23px;
+    clear: both;
+    margin-bottom: 18px;
+    width: 100%;
+    text-align: left;
+    min-height: 50px;
+}
+.single-clinicpromos #LAStyle .fertpricediv ul li:first-child, .single-clinicpromos #LAStyle #threecol .fertpricediv ul li:first-child {
+    list-style: none;
+    background: none;
+    width: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    float: left;
+    font-size: 17px;
+    font-size: 42px;
+    font-weight: bold;
+    color: #FEAA46;
+}
+.leftsinglethumb img {
+    max-width: 100%;
+    height: auto;
+}
+#blueblocks {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-top: 70px;
+}
+ .headerinner {
+    margin: 0 auto;
+    width: 93%;
+    padding: 30px 0;
+    display: block;
+}
+#phoneaccount-header-section {
+    float: right;
+    display: block;
+    width: auto;
+    min-width: 380px;
+}
+
+.assessmentheaddivinner.poshdiv {
+    position: relative;
+    float: left;
+    display: block;
+    width: 100%;
+}
+.absdiv {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+}
+.absdivfloat {
+    width: 50%;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+.absdivfloatinner {
+    padding: 50px;
+}
+h1.dosibold {
+    color: #EDA34B;
+    text-align: center;
+    width: 72%;
+    margin: 0 auto;
+    line-height: 34px;
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+.orgtxt {
+    color: #EDA34B;
+}
+h2.whabs {
+    font-size: 30px;
+    margin-bottom: 0.75em;
+    color: #fff;
+    font-family: 'Raleway';
+    text-align: center;
+}
+h4.dosreg   {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+h2.whabs {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Raleway';
+    text-align: center;
+}
+h4.dosreg   {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+#assessmform {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+#assessmform .gform_wrapper .top_label .gfield_label {
+    display: -moz-inline-stack;
+    display: inline-block;
+    line-height: 1.3;
+    clear: both;
+    display: none;
+}
+#assessmform .gform_wrapper input, #assessmform .gform_wrapper select {
+    padding: 10px;
+    font-size: 20px;
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+    margin-bottom: 0; 
+}
+#assessmform .gform_wrapper option {
+background-color: transparent !important;
+}
+body #assessmform .gform_wrapper ul li.gfield {
+    margin-top: 0;
+}
+.absdivfloatinner {
+    padding: 20px;
+}
+#assessmform .gform_wrapper .gform_footer input.button, #assessmform .gform_wrapper .gform_footer input[type=submit], #assessmform .gform_wrapper .gform_page_footer input.button, #assessmform .gform_wrapper .gform_page_footer input[type=submit] {
+    font-size: 16px;
+    width: auto;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 29px;
+    background: #3CAEC0;
+cursor:pointer;
+}
+#assessmform .gform_wrapper .gform_footer input.button:hover, #assessmform .gform_wrapper .gform_footer input[type=submit]:hover, #assessmform .gform_wrapper .gform_page_footer input.button:hover, #assessmform .gform_wrapper .gform_page_footer input[type=submit]:hover {
+background:#F26345;
+}
+#assescontent ul {
+    padding: 0;
+    margin: 0 4%;
+    width: 42%;
+    float: left;
+}
+article #assescontent ul li {
+    list-style: none;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/08/orgcheckmark.gif') left 9px no-repeat;
+    background-size: 33px auto;
+    padding-left: 42px;
+}
+article #assescontent ul li h5 {
+    color: #54B8C8;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 0;
+} 
+article #assescontent ul li h5 {
+    color: #54B8C8;
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+#header-image .assessmentheaddiv img {
+    min-width: 1600px !important;
+    height: auto;
+}
+#header-image .assessmentheaddiv {
+    width: 100%;
+    float: left;
+    display: block;
+    overflow-x: hidden;
+}
+.absdivfloat {
+    width: 751px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+article #assescontent ul li h5 {
+    color: #54B8C8;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+h1.dosibold {
+    color: #EDA34B;
+    text-align: center;
+    width: 86%;
+    margin: 0 auto;
+    line-height: 34px;
+    font-family: 'Raleway';
+    font-weight: 300;
+    font-size: 33px;
+}
+h2.whabs {
+    font-size: 29px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Raleway';
+    text-align: center;
+    font-weight: 300;
+}
+h4.dosreg {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 0px;
+    font-weight: 300;
+}
+#assessmform .gform_wrapper input, #assessmform .gform_wrapper select {
+    padding: 7px;
+    font-size: 20px;
+    background: #fff;
+    color: #333;
+    border-color: #fff;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+#assessmform .gform_wrapper .gform_footer input.button, #assessmform .gform_wrapper .gform_footer input[type=submit], #assessmform .gform_wrapper .gform_page_footer input.button, #assessmform .gform_wrapper .gform_page_footer input[type=submit] {
+    font-size: 16px;
+    width: auto;
+    margin: 0; 
+    background: #3CAEC0;
+    cursor: pointer;
+    text-decoration: none; 
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0; 
+    padding-right: 32px;
+    margin-left: 16%;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: -9px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 83% center no-repeat transparent !important;
+    background-size: 11px auto;
+    padding-right: 34px;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 60px 4px 30px;
+    background-size: 12px auto !important;
+    text-transform: uppercase;
+    /* background: transparent; */
+}
+#assessmform .gform_wrapper .gform_footer input.button:hover, #assessmform .gform_wrapper .gform_footer input[type=submit]:hover, #assessmform .gform_wrapper .gform_page_footer input.button:hover, #assessmform .gform_wrapper .gform_page_footer input[type=submit]:hover {
+    background: transparent;
+    opacity:.7;
+}
+article #assescontent ul li h5 {
+    color: #000;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+.page-id-1486 #main {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    width: 70%;
+    float: none;
+    display: block;
+    padding: 15px 0 35px 0;
+    margin: 35px auto 0 auto;
+    border-top: none;
+}
+.fdiclogo {
+       background: url('http://onefertilityhealth.com/wp-content/uploads/2016/08/EHO.png') left center no-repeat;
+    background-size: 40px auto;
+    padding: 12px 0 8px 50px;
+    display: block;
+}
+.discdiv, .discdiv p {
+    font-size: 14px;
+    font-weight: 300;
+}
+#prosperland h1.dosibold {
+    color: #fff;
+    text-align: center;
+    width: 86%;
+    margin: 0 auto;
+    line-height: 34px;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 33px;
+}
+#prosperland #assessmform .gform_wrapper input {
+       padding-left: 61px;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/08/dollsign-1.jpg') left center no-repeat #fff;
+    background-size: 50px auto;
+    border: 1px solid #999;
+    min-width: 330px;
+}
+#prosperland #assessmform {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+}
+body #prosperland .gform_wrapper .top_label div.ginput_container {
+    margin-top: 8px;
+    float: left;
+    display: block;
+}
+#prosperland #assessmform .gform_wrapper .gform_footer input.button, 
+#prosperland #assessmform .gform_wrapper .gform_footer input[type=submit], 
+#prosperland #assessmform .gform_wrapper .gform_page_footer input.button, 
+#prosperland #assessmform .gform_wrapper .gform_page_footer input[type=submit] {
+    font-size: 16px;
+    width: auto;
+    margin: 0;
+    background: #3CAEC0;
+    cursor: pointer;
+    text-decoration: none;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    padding-right: 32px;
+    margin-left: 16%;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: -9px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 96% center no-repeat transparent !important;
+    background-size: 11px auto;
+    padding-right: 34px;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 32px 7px 24px;
+    background-size: 11px auto !important;
+    text-transform: uppercase;
+    /* background: transparent; */
+    border: 1px solid;
+      min-width: 277px;
+}
+#prosperland .gform_wrapper .gform_footer {
+    padding: 16px 0 10px;
+    margin: 12px 0 0;
+    clear: none;
+    float: right;
+    display: block;
+}
+#prosperland h2.whabs {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Raleway';
+    text-align: center;
+    font-weight: 300;
+    float: none;
+    display: inline-block;
+    width: 100%;
+}
+#prosperland .absdivfloat {
+    width: 784px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+#prosperland .gform_wrapper {
+    overflow: inherit;
+    margin: 2px 0;
+    max-width: 100%;
+}
+#header-image #prosperland img.wp-image-1390 {
+    min-width: 232px !important;
+    height: auto;
+}
+#prosperland .absdivfloat { 
+    position: relative;
+}
+#prosperland .wonteffdiv {
+    position: absolute;
+    right: -250px;
+    top: 30%;
+}
+#prosperland .absdiv {
+    position: absolute;
+    top: 26%;
+    width: 100%;
+}
+#prosperland .prospimgdiv { 
+    position: absolute;
+    bottom: -80px;
+    width: 100%;
+    text-align: center;
+}
+#header-image #prosperland img.wp-image-1498 {
+    min-width: 250px !important; 
+    height: auto;
+}
+ .page-id-1490 #main {
+    background: none repeat scroll 0 0 #fff;
+    box-shadow: none;
+    width: 70%;
+    float: none;
+    display: block;
+    padding: 35px 0 0 0;
+    margin: 15px auto 0 auto;
+    border-top: none;
+}
+li#field_2_8 { 
+    clear: none !Important;
+}
+li#field_2_9 { 
+    clear: none !Important;
+}
+.clinic-column .innerferttxt .fertdesc p { 
+    max-height: 187px;
+}
+.mthtxt {
+    font-size: 36px;
+    float: right;
+    text-align: left;
+    line-height: 39px;
+    margin-top: 37px;
+    margin-left: -15px;
+}
+.schedbut a {
+    color: #FEBB6B;
+    font-size: 17px;
+    border: 1px solid #FEBB6B;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: block;
+    width: auto;
+    float: left;
+}
+  .schedbut a:hover {
+		opacity:.7;
+	  }
+	  .babystep {
+    position: relative;
+}
+.babystep span {
+    position: absolute;
+    right: 24px;
+}
+#findclinichead {
+    float: left;
+    display: block;
+    width: 100%;
+    background: url('https://onefertilityhealth.com/wp-content/uploads/2016/08/onefertclinicbg.jpg')left top no-repeat;
+    padding: 220px 0 240px 0;
+    background-size: 100% auto;
+}
+#findclinicfloat {
+    float: left;
+    width: 100%;
+    display: block;
+    background: rgba(0,0,0,0.6);
+    padding-bottom: 20px;
+    padding: 33px 0;
+}
+.topformdiv {
+    width: 92%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+    border-top: 1px solid #ccc;
+}
+.topformdiv li#field_9_2 {
+    display: inline-block;
+    width: 20%;
+}
+.topformdiv li#field_9_2 h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.topformdiv li#field_9_2 h5 {
+    font-size: 14px;
+    font-weight: 300;
+}
+.topformdiv li#field_9_2 h5 br {
+   display:none;
+}
+ 
+body .topformdiv .gform_wrapper .top_label div.ginput_container { 
+    margin-top: 0;
+}
+body .topformdiv .gform_wrapper ul li#field_9_3 {
+    width: 25%;
+    margin: 0 0 0 3% !important;
+    display: inline-block;
+}
+
+
+
+#field_9_3 .slider-display {
+    margin-top: 40px;
+}
+#field_9_3 .tooltip {
+    z-index: 1000;
+    min-width: 200px;
+    color: #000 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    font-size: 18px;
+    display: block !important;
+    border: none !important;
+    position: absolute;
+    margin-top: 5px;
+    color: #feaa46 !important;
+    font-weight: 300 !important;
+}
+#field_9_3 .tooltip ::after { 
+    content: " miles";
+}
+/* Range Slider CSS */
+#gform_wrapper_9 .noUi-handle .tooltip span {
+    color: #feaa46;
+    margin-top: -10px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+#gform_wrapper_9 .min-val-relation, #gform_wrapper_9 .max-val-relation {
+    color: #B8B8B9;
+}
+#gform_wrapper_9 .noUi-horizontal .noUi-handle {
+    width: 28px !important;
+    height: 28px !important;  
+}
+#gform_wrapper_9 .noUi-handle {
+    border: 2px solid #feaa46 !important;
+    border-radius: 33px !important;
+    background: #FFF;
+    cursor: default;
+    box-shadow: none;
+    background: #feaa46 !important;
+}
+#gform_wrapper_9 .noUi-background {
+    background: #feaa46 !Important;
+    box-shadow:none  !Important;
+    border: none !Important;
+}
+#gform_wrapper_9 .noUi-origin { 
+    background: #fff !important;
+}
+#gform_wrapper_9 .noUi-target {
+    border-radius: 11px !important;
+}
+#gform_wrapper_9 .noUi-origin {
+    border-radius: 11px !important;
+}
+#gform_wrapper_9 .noUi-target { 
+    height: 10px !important;
+} 
+#gform_wrapper_9 .noUi-handle { 
+    margin-top: -3px !important; 
+    box-shadow: none !Important;
+}
+#gform_wrapper_9 .noUi-handle:after, .noUi-handle:before { 
+    width: 0px !important;
+    background: transparent !important;
+}
+#gform_wrapper_9 .noUi-horizontal .noUi-handle { 
+    cursor: pointer !Important;
+}
+#gform_wrapper_9 .min-val-relation, #gform_wrapper_9 .max-val-relation {
+    color: #000;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#gform_wrapper_9.gform_wrapper .gform_footer input.button, #gform_wrapper_9.gform_wrapper .gform_footer input[type=submit] {
+    font-size: 1em;
+    float: right;
+    margin-right: 9.2%;
+    margin-top: 0;
+    border: none;
+    border-bottom: 3px solid #AD5372;
+    background:#feaa46;
+    color: #fff;
+    padding: 8px 53px 8px 30px;
+    font-size: 18px;
+    background: url('http://lylyslist.com/wp-content/uploads/2016/04/dblarrow.jpg')84% center no-repeat #DA6D92;
+    background-size: 22px auto;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: 'Roboto';
+}
+#gform_wrapper_9.gform_wrapper .gform_footer input.button:hover, #gform_wrapper_9.gform_wrapper .gform_footer input[type=submit]:hover {
+   opacity:.7; 
+}
+#gform_wrapper_9 .slider-display { 
+    height: 8px !important;
+}
+#gform_wrapper_9 .min-val-relation, #gform_wrapper_9 .max-val-relation {
+    color: #000;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#gform_wrapper_9 .noUi-horizontal .noUi-handle {
+    width: 20px !important;
+    height: 21px !important;
+}
+#gform_wrapper_9 .noUi-handle {
+    margin-top: 0px !important;
+    box-shadow: none !Important;
+    margin-left: 2px !important;
+}
+#gform_wrapper_9.gform_wrapper .top_label .gfield_label { 
+    font-weight: 300;
+}
+#gform_wrapper_9 .noUi-handle .tooltip span {
+    color: #feaa46;
+    margin-top: -10px;
+    display: block;
+    float: left;
+    width: 100%;
+}
+#gform_wrapper_9 #field_9_3 .tooltip {
+    z-index: 1000;
+    min-width: 200px;
+    color: #000 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    font-size: 13px;
+    display: block !important;
+    border: none !important;
+    position: absolute;
+    margin-top: 15px;
+    color: #feaa46 !important;
+    font-weight: 300 !important;
+}
+#gform_wrapper_9 #field_9_3  .tooltip ::after {
+    content: " miles";
+}
+#gform_wrapper_9 .noUi-target {
+    height: 8px !important;
+}
+#gform_wrapper_9.gform_wrapper .top_label li.gfield.gf_right_half {
+    float: left;
+    width: 24%;
+    margin-right: 2%;
+}
+#gform_wrapper_9.gform_wrapper .top_label .gfield_label {
+    margin: .625em 0 1.2em;
+    font-weight: 300;
+    display: -moz-inline-stack;
+    display: inline-block;
+    line-height: 1.3;
+    clear: both;
+}
+#gform_wrapper_9.gform_wrapper #field_4_4 .gfield_label,
+#gform_wrapper_9.gform_wrapper #field_4_5 .gfield_label { 
+    display: none;
+}
+#gform_wrapper_9 .noUi-origin {
+    background: #CCC !important;
+}
+#gform_wrapper_9.gform_wrapper .top_label li.gfield.gf_right_half {
+    float: none;
+    width: 20%;
+    margin-right: 2%;
+    margin-left: 0 !Important;
+}
+#gform_wrapper_9.gform_wrapper #field_9_3 .gfield_label {
+    margin: .625em 0 0 !important;
+    font-weight: 300;
+    display: -moz-inline-stack;
+    display: inline-block;
+    line-height: 1.3;
+    clear: both;
+}
+#gform_wrapper_9 .noUi-horizontal .noUi-handle {
+    width: 17px !important;
+    height: 17px !important;
+    margin-top: 1px !important;
+}
+#gform_wrapper_9 .noUi-handle .tooltip span {
+    color: #feaa46;
+    margin-top: -13px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    width: 100%;
+}
+#gform_wrapper_9  li#field_9_4 select {
+    padding: 8px;
+    font-size: 14px;
+} 
+#gform_wrapper_9.gform_wrapper .gform_footer input.button, #gform_wrapper_9.gform_wrapper .gform_footer input[type=submit] {
+    font-size: 1em;
+    float: none;
+    margin-right: 9.2%;
+    margin-top: 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 3px solid #AD5372;
+    background: #feaa46;
+    color: #fff;
+    padding: 8px 53px 8px 30px;
+    font-size: 18px;
+    background: none;
+    background-size: 22px auto;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: 'Roboto';
+    color: #FEBB6B;
+    font-size: 17px;
+    border: 1px solid #FEBB6B;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+#gform_wrapper_9.gform_wrapper .gform_footer input.button, #gform_wrapper_9.gform_wrapper .gform_footer input[type=submit] {
+    font-size: 1em;
+    float: none;
+    margin-right: 9.2%;
+    margin-top: 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 3px solid #AD5372;
+    background: #feaa46;
+    color: #fff;
+    padding: 8px 53px 8px 30px;
+    font-size: 18px;
+    background: none;
+    background-size: 22px auto;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: 'Roboto';
+    color: #FEBB6B;
+    font-size: 17px;
+    border: 1px solid #FEBB6B;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+#gform_wrapper_9.gform_wrapper .top_label li.gfield.gf_right_half {
+    float: none;
+    width: 22%;
+    margin-right: 2%;
+    margin-left: 0 !Important;
+}
+#gform_wrapper_9.gform_wrapper .gform_footer {
+    padding: 16px 0 10px;
+    margin: 16px 0 0 !important;
+    clear: none;
+    float: right;
+    margin-top: -76px !important;
+}
+#gform_wrapper_9 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+  font-size:14px;
+}
+#gform_wrapper_9 ::-moz-placeholder { /* Firefox 19+ */
+ color: #000;
+  font-size:14px;
+}
+#gform_wrapper_9 :-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+  font-size:14px; 
+}
+#gform_wrapper_9 :-moz-placeholder { /* Firefox 18- */
+ color: #000;
+  font-size:14px;
+}
+.page-template-fullwidth #gform_wrapper_9 .gform_body {
+    background: #fff !important;
+}
+
+.setappoint {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    height: 50%;
+    margin: 0 auto;
+    padding: 25px;
+    position: relative;
+    width: 50%;
+    margin-top: 50px;
+}
+
+.setappoint {
+display: none;
+}
+
+.mfp-content .setappoint {
+  display: block;
+
+}
+.su-lightbox > a:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+#setapform select {
+    padding: 12px 0;
+}
+#setapform input[type="submit"] {
+    font-size: 1em;
+    float: none;
+    margin-right: 9.2%;
+    margin-top: 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 3px solid #AD5372;
+    background: #feaa46;
+    color: #fff;
+    padding: 8px 53px 8px 30px;
+    font-size: 18px;
+    background: none;
+    background-size: 22px auto;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: 'Roboto';
+    color: #FEBB6B;
+    font-size: 17px;
+    border: 1px solid #FEBB6B;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+#setapform #field_10_11 {
+    opacity: .01;
+    /* display: none; */
+    height: 0;
+    z-index: -9999;
+    margin-bottom: 0;
+    width: 1px;
+}
+.babystep span {
+    position: absolute;
+    right: -26px;
+}
+.babystep span img {
+    width: 92%;
+}
+.scroll-back-to-top-wrapper {
+  bottom: 0 !Important;
+  padding-top: 0 !Important;
+  right: 15px !Important;
+}
+
+#prosperland h1.dosibold {
+    color: #fff;
+    text-align: center;
+    width: 86%;
+    margin: 0 auto;
+    line-height: 34px;
+    font-weight: 500;
+    font-size: 33px;
+}
+#prosperland #assessmform .gform_wrapper input {
+       padding-left: 61px;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/08/dollsign-1.jpg') left center no-repeat #fff;
+    background-size: 50px auto;
+    color: #999; 
+    border: 1px solid #999;
+    min-width: 330px;
+}
+#prosperland #assessmform {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+}
+body #prosperland .gform_wrapper .top_label div.ginput_container {
+    margin-top: 8px;
+    float: left;
+    display: block;
+}
+#prosperland #assessmform .gform_wrapper .gform_footer input.button, 
+#prosperland #assessmform .gform_wrapper .gform_footer input[type=submit], 
+#prosperland #assessmform .gform_wrapper .gform_page_footer input.button, 
+#prosperland #assessmform .gform_wrapper .gform_page_footer input[type=submit] {
+    font-size: 16px;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    padding-right: 32px;
+    margin-left: 16%;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: -9px;
+    margin-left: 0;
+    padding-right: 34px;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 32px 7px 24px;
+    text-transform: uppercase;
+    /* background: transparent; */
+    border: 1px solid;
+      min-width: 277px;
+      font-size: 16px;
+    width: auto;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 29px;
+		cursor:pointer;
+		    background: #3CAEC0;
+
+}
+
+#prosperland #assessmform .gform_wrapper .gform_footer input.button:hover, 
+#prosperland #assessmform .gform_wrapper .gform_footer input[type=submit]:hover, 
+#prosperland #assessmform .gform_wrapper .gform_page_footer input.button:hover, 
+#prosperland #assessmform .gform_wrapper .gform_page_footer input[type=submit]:hover {
+background:#F26345;
+}
+
+#prosperland .gform_wrapper .gform_footer {
+    padding: 16px 0 10px;
+    margin: 12px 0 0;
+    clear: none;
+    float: right;
+    display: block;
+}
+#prosperland h2.whabs { 
+    font-size: 28px; 
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    float: none;
+    display: inline-block;
+    width: 100%;
+}
+#prosperland .absdivfloat {
+    width: 784px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+}
+#prosperland .gform_wrapper {
+    overflow: inherit;
+    margin: 2px 0;
+    max-width: 100%;
+}
+#header-image #prosperland img.wp-image-1390 {
+    min-width: 232px !important;
+    height: auto;
+}
+#prosperland .absdivfloat { 
+    position: relative;
+}
+#prosperland .wonteffdiv {
+    position: absolute;
+    right: -250px;
+    top: 30%;
+}
+#prosperland .absdiv {
+    position: absolute;
+    top: 26%;
+    width: 100%;
+}
+#prosperland .prospimgdiv { 
+    width: 100%;
+    text-align: center;
+}
+#header-image #prosperland img.wp-image-1498 {
+    min-width: 360px !important; 
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#gform_fields_11 .instruction, #gform_fields_12 .instruction {
+	display: none; 
+}
+

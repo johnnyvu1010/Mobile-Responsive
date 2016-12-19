@@ -1,0 +1,24 @@
+/* IE 7 styles */
+
+.clearfix { display: inline-block; }
+
+.screen-reader-text { display: none; }
+
+#access { width: 990px; }
+
+nav[role="navigation"] ul li { display: inline; }
+
+
+nav[role="navigation"] ul li { height: 2em; display: inline; clear: none; }
+nav[role="navigation"] ul li a { padding: 5px 8px; }
+
+
+nav[role="navigation"] ul li:hover ul  { display: inline-block; } 
+nav[role="navigation"] ul li ul  { position: relative; 
+                                   padding: 5px 0 0 0; }
+
+nav[role="navigation"] ul li ul li:hover ul  { display: inline-block; 
+                                               position: absolute !important; }
+nav[role="navigation"] ul li ul li ul { padding: 0 0 0 0 !important; }
+
+

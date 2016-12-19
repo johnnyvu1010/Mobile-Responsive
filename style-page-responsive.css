@@ -1,0 +1,254 @@
+.showforminner { 
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/creditscore.png')210px 99% no-repeat rgba(164,164,164,1); 
+    background-size: 240px auto;
+}
+.page-template-fullwidth .gform_body {
+    background: rgba(164,164,164,1) !important; 
+}
+@media only screen and (min-width:0px) and (max-width:1443px){  
+#loanform .gform_wrapper {
+    overflow: inherit;
+    margin: 1em 0;
+    max-width: 98%;
+    float: left;
+    display: block;
+    width: 97%;
+}
+}
+@media only screen and (min-width:0px) and (max-width:1390px){  
+    .widget-header-slider .gform_wrapper .gform_body {
+        float: left;
+    }
+    
+    #gform_wrapper_9.gform_wrapper .gform_footer {
+        clear: none;
+        float: left;
+        margin: 29px 0 0 0 !important;
+        
+    }
+    .page-template-fullwidth .widget-header-slider .gform_wrapper .top_label .gfield_label {
+        font-size: 12px; 
+    }
+    .page-template-fullwidth .gform_wrapper li.gfield_html {
+        margin-top: 0 !important;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:1215px){  
+  #phoneaccount-header-section {
+    float: right;
+    display: block;
+    width: 40%;
+}
+	#main { 
+    width: 94%; 
+}
+#footer-content { 
+    width: 96%; 
+}
+  
+}
+
+@media only screen and (min-width:0px) and (max-width:1164px) {   
+#findclinicheadmsg {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    color: #fff;
+}
+#LAStyle .fertloc {
+    margin-top: 0;
+    display: inline-block;
+}
+ul.cliniclist li {
+    float: left;
+}
+ul.cliniclist li:nth-child(3), ul.cliniclist li:nth-child(4), ul.cliniclist li:nth-child(5), ul.cliniclist li:nth-child(8), ul.cliniclist li:nth-child(9), ul.cliniclist li:nth-child(10) {
+    width: 31.6%;
+}
+}
+@media only screen and (min-width:0px) and (max-width:1083px) { 
+#loanform li#field_1_2 {
+    margin-top: 29px;
+}
+
+}
+@media only screen and (min-width:0px) and (max-width:1064px) {   
+    #findclinichead {
+        float: left;
+        display: block;
+        width: 100%;
+        background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/clinicslide.jpg')left top no-repeat;
+        padding: 40px 0 142px 0;
+        background-size: 100% auto;
+    }
+    #gform_wrapper_9.gform_wrapper .gform_footer input.button, #gform_wrapper_9.gform_wrapper .gform_footer input[type="submit"] {
+        padding: 8px 20px;
+    }
+    
+    #gform_wrapper_9.gform_wrapper .gform_footer {
+        margin: 32px 0 0 !important;
+    }
+}
+@media only screen and (min-width:0px) and (max-width:1020px) { 
+    #clinicresults .best-ivf-widget {
+        float: left;
+    }
+   .clinic-column .innerferttxt .fertdesc p {
+        max-height: 235px;
+    }
+}
+@media only screen and (min-width:0px) and (max-width:940px) {   
+#phoneaccount-header-section {
+    float: left;
+    display: block;
+    width: auto;
+}
+}
+@media only screen and (min-width:0px) and (max-width:910px) {   
+#loanform li#field_1_2 {
+    margin-top: 18px;
+}
+#sectiontwo #loanform .gform_wrapper .top_label li.gfield.gf_right_half {
+    margin: 0 0 .5em;
+    width: 94.5%;
+    margin-top: 0;
+}
+.page-template-bestivfdeals #primary {
+    width: 100%;
+}
+.page-template-bestivfdeals #sidebar {
+    width:96%;
+    padding: 0 2%;
+}
+.page-template-bestivfdeals #sidebar img {
+    width:280px;
+}
+.page-template-page-with-sidebar #primary {   
+    width: 100%;
+}
+.page-template-page-with-sidebar #sidebar {
+    width:96%;
+    padding: 0 2%;
+}
+}
+@media only screen and (min-width:0px) and (max-width:763px) {   
+.page-template-page-with-sidebar #primary {
+    width: 100%;
+    float: right;
+    display: block;
+}
+
+}
+@media only screen and (min-width:0px) and (max-width:731px) {   
+#FindClinic img.wp-image-51 {
+    width: 91%;
+    height: auto;
+    padding: 80px 0 0 0;
+}
+  .page-id-19 #sectiontwo #loanform #gform_wrapper_1.gform_wrapper .gform_footer {
+        padding: 0em 0 .625em;
+        margin: 1em 0 0;
+        clear: both;
+        float: right;
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .widget-header-slider #gform_wrapper_9.gform_wrapper .gform_body {
+        width:100% !important;
+    }
+    .widget-header-slider #gform_wrapper_9.gform_wrapper .top_label li.gfield.gf_right_half {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+}
+@media only screen and (min-width:0px) and (max-width:695px) {
+#FindClinic .gform_wrapper .gform_footer input.button, #FindClinic .gform_wrapper .gform_footer input[type=image], #FindClinic .gform_wrapper .gform_footer input[type=submit] {
+    display: -moz-inline-stack;
+    display: inline-block;
+    text-decoration: none;
+    color: #FEBB6B;
+    float: left;
+    font-size: 21px;
+    margin-top: 15px;
+    margin-left: 0;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/orangechevron.png') 106px center no-repeat;
+    background-size: 9px auto;
+    padding-right: 32px;
+    border: 1px solid #FEBB6B;
+    border-radius: 5px;
+    padding: 8px 30px 8px 10px;
+    cursor: pointer;
+}
+  #findclinichead {
+    float: left;
+    display: block;
+    width: 100%;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/clinicslide.jpg') 36% top no-repeat;
+    padding: 40px 0 442px 0;
+    background-size: 200% auto;
+}
+  #FindClinic #findclinicfloat .gform_footer {
+    float: right;
+    clear: none;
+    width: 95%;
+    margin-top: -2px;
+    padding: 0;
+}
+.page-template-fullwidth #findclinicfloat .gform_wrapper {
+   width: 100%; 
+}
+.page-template-fullwidth #FindClinic #findclinicfloat .gform_body {
+    width: 65%;
+}
+#FindClinic #findclinicfloat .gform_footer {
+    width: 30%;
+    margin-right: 0;
+}
+#FindClinic .gform_wrapper .gform_footer input.button, #FindClinic .gform_wrapper .gform_footer input[type="image"], #FindClinic .gform_wrapper .gform_footer input[type="submit"] {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 16px;
+}
+}
+
+@media only screen and (min-width:0px) and (max-width:490px) {
+    ul.cliniclist li {
+        width: 100% !important;
+        margin-right: 0;
+    }
+    .fertdesc {
+        min-height: 85px;
+    }
+}
+@media only screen and (min-width:0px) and (max-width:406px) {   
+#phoneaccount-header-section {
+    float: left;
+    display: block;
+    width: 76%;
+}
+
+ #findclinichead {
+    float: left;
+    display: block;
+    width: 100%;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/clinicslide.jpg') 36% top no-repeat;
+    padding: 40px 0 442px 0;
+    background-size: 230% auto;
+}
+#findclinichead {
+    float: left;
+    display: block;
+    width: 100%;
+    background: url('http://onefertilityhealth.com/wp-content/uploads/2016/05/clinicslide.jpg') 36% top no-repeat;
+    padding: 40px 0 12px 0;
+    background-size: 230% auto;
+}
+
+}
+@media only screen and (min-width:0px) and (max-width:350px) {   
+    #zipcodesearch {
+        width: 95%;
+    }
+}
